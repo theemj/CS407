@@ -1,0 +1,86 @@
+<!DOCTYPE>
+
+<!-- Alicia Wood
+     2/3/2016
+     midiate_signin.html
+-->
+
+<html>
+   <head>
+      <title>Midiate Sign In</title>
+
+      <script src="error.js"></script>				<!-- JavaScripts -->
+
+      <style>
+	 input[type=text]
+	 {
+            border: none;
+   	    border-bottom: 2px solid black;
+	 }
+
+	 body
+	 {
+            margin: 0px auto;					/*set margin; top/bottom left/right*/
+	    text-align: center;
+	 }
+      </style>
+
+	<link href="midiate_General_Styles.css" rel="stylesheet" />
+
+   </head>
+   <body>								<!-- body of the website/what visiters see -->
+
+      <header>
+		<h1><img src="MidiateLogo.png" alt="Midiate" /></h1>
+      </header>
+
+      <form action="midiate_signin_proc.php" method="POST">			<!-- start of form -->
+	 <label>						<!-- email field -->
+	    Email
+	    <br>						<!-- line break -->
+	    <input type="text" name="email" required="required">
+	 </label>
+
+         <br>							<!-- line breaks between input field sections -->
+	 <br>
+
+	 <label>						<!-- password field -->
+	    Password
+	    <br>						<!-- line break -->
+	    <input type="text" name="password" required="required">	<!-- input type="password" name="password" -->
+	 </label>
+
+	 <br>
+	 <br>
+
+	 <input type="submit" value="Sign In">			<!-- log in button -->
+      </form>						<!-- end of form -->
+
+	 <br>
+	 <br>
+	 <br>
+	 <br>
+
+      <form action="midiate_signin_proc.php" method="POST">			<!-- start of form -->
+	 <input type="text" name="email" placeholder="email">
+
+         <br>							<!-- line breaks between input field sections -->
+	 <br>
+
+	 <input type="text" name="password" placeholder="Password">	<!-- input type="password" name="password" -->
+
+	 <br>
+	 <br>
+
+	 <input type="submit" value="Sign In">			<!-- log in button -->
+      </form>						<!-- end of form -->
+   </body>
+
+   <footer>
+		<p>
+			&copy;2016 Midiate &nbsp;&bull;&nbsp;
+			Property of Meredith College CS407 &nbsp;&bull;&nbsp;
+			All Rights Reserved
+		</p>
+   </footer>
+</html>

@@ -1,0 +1,29 @@
+/* 
+   Midiate Answer It Layout Sheet
+
+   Filename: answer_It_Layout.css
+   Supporting Files: none
+*/
+
+/* Table Styles */
+
+table {
+	display: block;
+	margin: 0 auto;
+	width: 850px;
+	padding: 20px;
+}
+
+table tbody tr {
+	height: 50px;
+}
+
+table tbody td {
+	
+}
+
+/* Red and Blue Button Styles */
+
+div {
+	float: left;
+}

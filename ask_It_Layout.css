@@ -1,0 +1,24 @@
+/*
+   Enter Your Argument Layout Sheet
+
+   Filename:	argument_Layout.css
+   Supporting Files:	MidiateLogo.png
+*/
+
+/* Section Styles */
+
+section {
+	display: block;
+	margin: 125px;	
+}
+
+/* Button Styles */
+
+.askit {
+	display: block;
+	margin: 10px 5px;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}

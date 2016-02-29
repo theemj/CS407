@@ -1,0 +1,115 @@
+/* 
+   Midiate General Style and Layout Sheet
+
+   Filename:   midiate_General_Styles.css
+   Supporting Files:   MidiateLogo.png
+*/
+
+/* Layout Stuff */
+/* Body Styles */
+
+body {
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+}
+
+/* Container Styles */
+#container {
+	min-height: 100%;
+	position: relative;
+}
+
+/* Header Styles */
+
+header {
+	border-bottom: 5px solid black;
+}
+
+/* Header Image Styles */
+
+header img {
+	display: block;
+	margin: 0 auto;
+	width: 300px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: black;
+    color: white;
+	text-align: center;
+	font-family: Verdana, Geneva, sans serif;
+}
+
+#footer {
+	position: absolute;
+	bottom: 0px;
+	padding-bottom: 0px;
+	width: 100%;
+	height: 50px;
+}
+
+/* Navigation Styles */
+
+nav ul {
+	margin: 0 auto;
+	width: 500px;
+	padding: 0;
+}
+
+nav ul li {
+	display: inline;
+	float: left;
+	margin: 10px 5px;
+	padding: 15px;	
+}
+
+/* Button Styles */
+
+.logoff {
+	display: block;
+	margin: 10px;
+	margin-left: 1250px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+}
+
+/* Stylish Stuff */
+/* Navigation Styles */
+
+nav ul {
+	list-style-type: none;
+	
+}
+
+nav ul li {
+	background-color: blue;
+	color: white;
+	font-family: Verdana, Geneva, sans serif; 
+}
+
+nav ul li:hover {
+	font-weight: bold;
+}
+
+.active {
+	background-color: red;
+}
+
+/* Button Styles */
+
+.logoff {
+	font-family: Verdana, Geneva, sans serif;
+	color: white;
+	background-color: black;
+}
+
+/* Link Styles */
+
+a {
+	text-decoration: none;
+	color: white;
+}
