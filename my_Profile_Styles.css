@@ -1,0 +1,21 @@
+/*
+   My Profile Style Sheet
+	
+   Filename:	my_Profile_Styles.css
+   Supporting Files:	MidiateLogo.png
+*/
+
+/* Section Styles */
+
+section {
+	font-family: Verdana, Geneva, sans serif;
+}
+
+/* Button Styles */
+
+.e_Change, .p_Change {
+	font-family: Verdana, Geneva, sans serif;
+	color: white;
+	background-color: black;
+}
+	

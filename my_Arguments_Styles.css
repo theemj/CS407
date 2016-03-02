@@ -1,0 +1,16 @@
+/*
+   My Arguments Style Sheet
+
+   Filename:	my_Arguments_Styles.css
+   Supporting Files:	MidiateLogo.png
+*/
+
+/* Table Styles */
+
+tbody {
+	font-family: Verdana, Geneva, sans serif;
+}
+
+.question {
+	font-weight: bold;
+}

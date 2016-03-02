@@ -1,0 +1,20 @@
+/*
+   My Profile Layout Sheet
+
+   Filename:	my_Profile_Layout.css
+   Supporting Files:	MidiateLogo.png
+*/
+
+/* Section Styles */
+
+section {
+	display: block;
+	margin: 100px;
+}
+
+/* Button Styles */
+
+.e_Change, .p_Change {
+	margin: 10px;
+	padding: 10px;
+}
