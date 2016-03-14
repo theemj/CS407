@@ -12,9 +12,14 @@ section {
 	margin: 100px;
 }
 
-/* Button Styles */
+/* Link Styles */
 
-.e_Change, .p_Change {
-	margin: 10px;
+p a {
+	margin: 40px;
 	padding: 10px;
+}
+
+#change_Pass {
+	display: block;
+	float: left;
 }

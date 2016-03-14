@@ -11,9 +11,9 @@ section {
 	font-family: Verdana, Geneva, sans serif;
 }
 
-/* Button Styles */
+/* Link Styles */
 
-.e_Change, .p_Change {
+p a {
 	font-family: Verdana, Geneva, sans serif;
 	color: white;
 	background-color: black;

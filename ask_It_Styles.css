@@ -1,7 +1,7 @@
 /* 
    Enter Your Argument Style Sheet 
    
-   Filename:	argument_Styles.css
+   Filename:	ask_it_Styles.css
    Supporting Files:	MidiateLogo.png
 */
 
@@ -15,4 +15,6 @@ section {
 
 .askit {
 	font-family: Verdana, Geneva, sans serif;
+	color: white;
+	background-color: black;
 }
