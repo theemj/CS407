@@ -22,6 +22,15 @@ openDB();
 
    $userID = '1234';					//fill in faux numbers until algorithm is finished for auto count
    $postID = '01';
+   
+   $getID = "SELECT MAX(postID) FROM Question";
+   
+   $resultID = mysql_query($getID);						//get a table (last row of Question's table)
+	   
+   if(noerror($resultID))
+   {
+	   $postID = makeMax($resultID);					//get the actual number to be added to this knew post
+   }
 
    $query = "INSERT INTO Question SET "
 				. "questionText = '$questionText', "
@@ -32,20 +41,38 @@ openDB();
 				. "answer1Votes = '0', "		//set these as 'defaults'
 				. "answer2Votes = '0';";
 
-   if(noerror(mysql_query($query))
+   if(noerrorquiet(mysql_query($query)))
    {
       echo "it worked!";
-      //header("Location: home.php");
+      header("Location: home.php");
    }
-   else
+   else													//if there is some error sending row to table
    {
       echo "something's wrong";
       //header("Location: ask_It.php"); maybe?
    }
-   //header("Location: home.php");
-		
-		//noerrorquiet( $result ); 
+?>
 
+<?php
+	//This function will get a number from a query result (a table) and add one to create
+	//the next postID value
+	function makeMax($queryResult)
+	{
+	    if (@mysql_num_rows($queryResult)==0)
+		{
+			echo "<b>Query completed.  Empty result.</b><br>";
+		}
+		else
+		{
+			$nf = mysql_num_fields($queryResult);			//to be ignored (table headings)
+			$nr = mysql_num_rows($queryResult);
+			
+            $row = mysql_fetch_array($queryResult);
+			$newNum = $row[0] + 1;
+			
+			return $newNum;
+		}
+	}
 ?>
 
 
@@ -65,7 +92,7 @@ openDB();
 
 	 $result = mysql_query($q);			//send value of variable to database and get result
 
-	 if(noerror($result)
+	 if(noerror($result))
 	 {
 	    tabledump($result);				//print results of mysql query in table format if no errors
 	 }
