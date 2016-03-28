@@ -1,6 +1,9 @@
 <?php
 	//Alicia Wood- converted to php on 2/20/2016
+	//edited by Maryam Ahmed
    session_start();
+   include("openDB.php");
+   openDB();
 
    if($_SESSION['loggedIn'] == "yes")
    {
@@ -32,7 +35,7 @@ echo<<<BLOCKBODY
 	      <nav>										<!-- navigation; unordered list -->
 		 <ul>
 		    <li><a href="ask_It.php">Ask It</a></li>
-		    <li class="active"><a href="answer_It.php">Answer It</a></li>			<!-- this page is 'active'  ->
+		    <li class="active"><a href="answer_It.php">Answer It</a></li>			<!-- this page is 'active'  -->
 		    <li><a href="my_Arguments.php">My Arguments</a></li>
 		    <li><a href="my_Profile.php">My Profile</a></li>
 		 </ul>
@@ -53,7 +56,11 @@ echo<<<BLOCKBODY
 		    </tr>
 		 </tbody>
 	      </table>										<!-- end table -->
+BLOCKBODY;
 
+		placeQuestions();
+		
+echo<<<BLOCKBODY2
 	      <div id="footer">									<!-- footer section -->
 		 <footer>
 		    <p>
@@ -67,10 +74,50 @@ echo<<<BLOCKBODY
 	</body>
 </html>
 
-BLOCKBODY;
+BLOCKBODY2;
 
    }
    else
       header("Location: midiate_signin.html");
 
+?><?php
+function placeQuestions()
+{
+	$query = "SELECT * FROM Question WHERE userID!='1234';";	//change to "this" user's id from session, not hardcode
+	
+	$result = mysql_query($query);
+	if($result==0)
+	{
+		echo "<b>Error " . mysql_errno() . ": " . mysql_error() . "</b>";
+	}
+	else if (@mysql_num_rows($result)==0)
+	{
+		echo "<b>No arguments.</b><br>";
+	}
+	else
+	{
+		$fieldNum = mysql_num_fields($result);		//columns - horizontal
+		$rowNum = mysql_num_rows($result);			//rows - vertical
+		
+		echo "<table border='1' padding='5px'> <thead>";
+		echo "<tr>";
+		for($i=1; $i<$fieldNum-1; $i++ )			//show postID to answer2Votes; leave out userID and showNotShow fields
+		{
+			echo "<th>".mysql_field_name($result,$i)."</th>";
+		}
+		echo "</tr>";
+		echo "<tbody>";
+		for($i=0; $i<$rowNum; $i++ )
+		{
+			echo "<tr>";
+			$row=mysql_fetch_array($result);
+			for( $j=1; $j<$fieldNum-1; $j++ )		//show postID to answer2Votes; leave out userID and showNotShow fields
+			{
+				echo "<td>" . $row[$j] . "</td>";
+			}
+			echo "</tr>";
+		}
+		echo "</tbody></table>";
+   }
+}
 ?>
