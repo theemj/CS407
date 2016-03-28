@@ -1,13 +1,14 @@
 <?php
-   //Alicia Wood
+   //Alicia Wood, edited by Maryam Ahmed
    //2/10/2016
    //midiate_signin_proc.php
 
+   session_start();
+   
    include("includeMe.php");				//files included in this file
-   include("openDBbatman.php");
+   include("openDB.php");
 
    openDB();						//open external functions
-   session_start();
 
    $email = $_POST['email'];			//variables
    $password = $_POST['password'];
@@ -33,7 +34,7 @@
    }
    else
    {
-      header("Location: midiate_signin.php");			//go back to login page
+      header("Location: midiate_signin.html");			//go back to login page
    }
 ?>
    
