@@ -1,5 +1,6 @@
 <?php
 	//Alicia Wood converted to php on 2/20/2016
+	//edited by Maryam Ahmed
    session_start();
 
    if($_SESSION['loggedIn'] =="yes")
@@ -15,7 +16,7 @@
 		Date: 2/3/2016
 	   -->
 
-	   <title>Midiate: Ask It<title>
+	   <title>Midiate: Ask It</title>
 
 	   <link href="midiate_General_Styles.css" rel="stylesheet" />				<!-- stylesheets -->
 	   <link href="ask_It_Layout.css" rel="stylesheet" />
