@@ -29,7 +29,7 @@ openDB();
 	   
    if(noerror($resultID))
    {
-	   $postID = makeMax($resultID);					//get the actual number to be added to this knew post
+	   $postID = makeMax($resultID);					//get the actual number to be added to this new post
    }
 
    $query = "INSERT INTO Question SET "
@@ -43,7 +43,7 @@ openDB();
 
    if(noerrorquiet(mysql_query($query)))
    {
-      echo "it worked!";
+      //echo "it worked!";
       header("Location: home.php");
    }
    else													//if there is some error sending row to table

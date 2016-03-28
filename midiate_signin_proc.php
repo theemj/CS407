@@ -12,13 +12,14 @@
    $email = $_POST['email'];			//variables
    $password = $_POST['password'];
 
-   $findPassword = "SELECT password FROM User WHERE email='$email';";
+   $findPassword = "SELECT password, userID FROM User WHERE email='$email';";
 
    $resultingTable = mysql_query($findPassword);
    if(noerror($resultingTable))
    {
       $theRow = mysql_fetch_array($resultingTable);		//get the row (the password will be on the row)
-      $thePassword = $theRow['password'];			//get the password from the row
+      $thePassword = $theRow['password'];		  //get the password from the row
+	  $theUserID = $theRow['userID'];
 
       if($password != $thePassword)			//if wrong password for that user
       {
@@ -28,6 +29,7 @@
       {
          $_SESSION['loggedIn'] = "yes";				//mark user as logged in
          $_SESSION['email'] = $email;
+		 $_SESSION['userID'] = $userID;
          header("Location: home.php");		//go to profile page of user
       }
    }
