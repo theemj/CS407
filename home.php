@@ -1,4 +1,5 @@
 <?php
+   //converted to php by ALicia Wood (2/20/2016)
    session_start();
 
    if ($_SESSION['loggedIn'] == "yes")
@@ -15,7 +16,6 @@ echo<<<BLOCKBODY
 		     Home Page
 
 		     Author: Emily Johnson - edited by Desiree Howell & Maryam Ahmed
- & converted to php Alicia Wood (2/20/2016)
 		     Date: 2/10/2016
 
 		-->
