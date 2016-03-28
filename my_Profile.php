@@ -1,5 +1,6 @@
 <?php
    //Alicia Wood converted to php on 3/21/2016
+   //edited by Maryam Ahmed
    session_start();
 
    if ($_SESSION['loggedIn'] == "yes")
@@ -24,6 +25,7 @@ echo<<<BLOCKBODY
 	</head>
 		
 	<body>
+	  <div id="container">
 		<header>
 			<h1><img src="MidiateLogo.png" alt="Midiate" /></h1>
 			<button type="button" class="logoff">Log Off</button>
@@ -31,10 +33,10 @@ echo<<<BLOCKBODY
 
 		<nav>																<!-- navigation; horizontal -->
 		   <ul>
-			<li><a href="ask_It.html">Ask it</a></li>
-			<li><a href="answer_It.html">Answer it</a></li>
-			<li><a href="my_Arguments.html">My Arguments</a></li>
-			<li class="active"><a href="my_Profile.html">My Profile</a></li>
+			<li><a href="ask_It.php">Ask it</a></li>
+			<li><a href="answer_It.php">Answer it</a></li>
+			<li><a href="my_Arguments.php">My Arguments</a></li>
+			<li class="active"><a href="my_Profile.php">My Profile</a></li>
 		   </ul>
 		</nav>	
 
@@ -48,18 +50,20 @@ echo<<<BLOCKBODY
 		
 		   <p id="change_Email"><a href="change_Email.html">Change Email</a></p>
 		   <p id="change_Pass"><a href="change_Password.html">Change Password</a></p>
-		<section>
-
+		</section>
+		
+		<div id="footer">
+		  <footer>								<!-- Maryam; footer of webpage -->
+			<p>
+				&copy;2016 Midiate &nbsp;&bull;&nbsp;
+				Property of Meredith College CS407 &nbsp;&bull;&nbsp;
+				All Rights Reserved
+			</p>
+		  </footer>
+		</div>
+		
+      </div>
 	</body>
-
-	
-	<footer>																<!-- section by Maryam -->
-		<p>
-			&copy;2016 Midiate &nbsp;&bull;&nbsp;
-			Property of Meredith College CS407 &nbsp;&bull;&nbsp;
-			All Rights Reserved
-		</p>
-	</footer>
 
 </html>
 
