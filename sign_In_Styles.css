@@ -1,0 +1,41 @@
+/*
+   Midiate Sign In Page Styles
+
+   Filename: sign_In_Styles.css
+*/
+
+/* Body Styles */
+
+body {
+	font-family: Verdana, Geneva, sans serif;
+}
+
+/* Form Styles */
+
+#email {
+	color: red;
+	font-weight: bold;
+	font-size: 25px;
+	display: block;
+	text-align: left;
+	margin-left: 600px;
+}
+
+#pass {
+	color: blue;
+	font-weight: bold;
+	font-size: 25px;
+	display: block;
+	text-align: left;
+	margin-left: 600px;
+}
+
+/* Button Styles */
+
+#sign_In {
+	font-family: Verdana, Geneva, sans serif;
+	background-color: black;
+	color: white;
+	height: 30px;
+	width: 100px;
+}
