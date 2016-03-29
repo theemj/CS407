@@ -22,6 +22,8 @@ echo<<<BLOCKBODY
 
 
 		<link href="midiate_General_Styles.css" rel="stylesheet" />
+        <link href="my_Arguments_Styles.css" rel="stylesheet" />
+		<link href="my_Arguments_Layout.css" rel="stylesheet" />
 
 
 	</head>

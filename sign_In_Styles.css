@@ -10,7 +10,15 @@ body {
 	font-family: Verdana, Geneva, sans serif;
 }
 
+a {
+	font-color: black;
+	text-decoration: none;
+}
+
 /* Form Styles */
+form {
+	margin: 0px auto;
+}
 
 #email {
 	color: red;

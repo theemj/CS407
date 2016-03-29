@@ -1,6 +1,6 @@
 <!DOCTYPE>
 
-<!-- Alicia Wood modified by Maryam Ahmed
+<!-- Alicia Wood
      2/3/2016
      midiate_signin.html
 -->
@@ -12,7 +12,7 @@
       <script src="error.js"></script>				<!-- JavaScripts -->
 
       <style>
-	 input[type=text]
+	 input[type=text], input[type=password]
 	 {
             border: none;
    	    border-bottom: 2px solid black;
@@ -26,6 +26,7 @@
       </style>
 
 	<link href="midiate_General_Styles.css" rel="stylesheet" />
+	<link href="sign_In_Styles.css" rel="stylesheet" />
 
    </head>
    <body>								<!-- body of the website/what visiters see -->
@@ -34,53 +35,43 @@
 		<h1><img src="MidiateLogo.png" alt="Midiate" /></h1>
       </header>
 
+	<h2>Welcome to Midiate, the revolutionary third party voting app!</h2>
+	<h3>Created by: Alicia Wood, Emily Johnson, Desiree Howell, and Maryam Ahmed</h3>
+
+	<br>
+	<br>
+	<br>
+
       <form action="midiate_signin_proc.php" method="POST">			<!-- start of form -->
-	 <label>						<!-- email field -->
+	 <label id="email">						<!-- email field -->
 	    Email
 	    <br>						<!-- line break -->
+	    <br>
 	    <input type="text" name="email" required="required">
 	 </label>
 
          <br>							<!-- line breaks between input field sections -->
 	 <br>
 
-	 <label>						<!-- password field -->
+	 <label id="pass">						<!-- password field -->
 	    Password
 	    <br>						<!-- line break -->
-	    <input type="text" name="password" required="required">	<!-- input type="password" name="password" -->
+	    <br>
+	    <input type="password" name="password" required="required">	<!-- input type="password" name="password" -->
 	 </label>
 
 	 <br>
 	 <br>
 
-	 <input type="submit" value="Sign In">			<!-- log in button -->
+	 <input type="submit" id="sign_in" value="Sign In">			<!-- log in button -->
       </form>						<!-- end of form -->
 
-	 <br>
-	 <br>
-	 <br>
-	 <br>
+ 	<br>							<!-- line break -->
 
-      <form action="midiate_signin_proc.php" method="POST">			<!-- start of form -->
-	 <input type="text" name="email" placeholder="email">
-
-         <br>							<!-- line breaks between input field sections -->
-	 <br>
-
-	 <input type="text" name="password" placeholder="Password">	<!-- input type="password" name="password" -->
-
-	 <br>							<!-- line breaks between input field sections -->
-	 <br>
-
-	 <input type="submit" value="Sign In">			<!-- log in button -->
-      </form>						<!-- end of form -->
-
-      <br>							<!-- line break -->
-
-      <p>No account?  Register <a href="midiate_reg.php">here</a></p>		<!-- link to registration page -->
+      <p>No account?  Register <a href="midiate_reg.php" id="reg">here</a></p>		<!-- link to registration page -->
    </body>
 
-   <footer>						<!-- Maryam -->
+   <footer>
 		<p>
 			&copy;2016 Midiate &nbsp;&bull;&nbsp;
 			Property of Meredith College CS407 &nbsp;&bull;&nbsp;
