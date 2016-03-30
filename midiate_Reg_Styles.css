@@ -1,0 +1,40 @@
+/*
+   Midiate Registration Page Style Sheet
+
+   Filename: midiate_Reg_Styles.css
+*/
+
+/* Body Styles */
+
+body {
+	margin: 0px auto;					/*set margin; top/bottom left/right*/
+	text-align: center;
+}
+	
+
+/* Form Styles */
+
+form {
+	margin: 100px auto;					/*set all margins*/
+	padding: 20px;
+	width: 800px;
+	background-color: LightGray;			/*set background color to light gray*/
+
+	border: 5px solid blue;				/*set border; thick solid blue*/
+	border-radius: 20px;					/*border has curved corners*/
+}
+
+label {
+	font-family: Verdana, Geneva, sans serif;
+}
+
+/* Button Styles */
+
+#reg_Button {
+	font-family: Verdana, Geneva, sans serif;
+	font-size: 20px;
+	color: white;
+	background-color: black;
+	width: 175px;
+	height: 35px;
+}
