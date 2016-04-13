@@ -18,14 +18,15 @@
    $userId = "234";								//change later!
 
    //Check to see if the email already exists in system (in other words, the email is already in use)
-   $findEmail= "SELECT * FROM User WHERE email=$email;";
+   $findEmail= "SELECT * FROM User WHERE email='$email';";
    $result = mysql_query( $findEmail );
-
+if(noerrorquiet($result))
+{
    if($result != null)
    {					 	 //if any records match the email, print notice to screen
       echo "<!DOCTYPE> <html> <body>";
       echo "This email address is already in use.\n";
-      echo "Return to <a href=\"midiate_reg.html\">registration</a> and try again.";
+      echo "Return to <a href=\"midiate_reg.php\">registration</a> and try again.";
       echo "</body> </html>";
    }
    else						//otherwise the email is free, continue to check passwords
@@ -44,11 +45,37 @@
          $_SESSION['email'] = $email;
          $_SESSION['meadUserId'] = $userId;
 
-	 $addAccount = "INSERT INTO User SET userID='$userId', email = '$email', "
+		$addAccount = "INSERT INTO User SET userID='$userId',"
+						. "email = '$email', "
 						. "password = '$password1';";
-	 mysql_query( $addAccount );
+		mysql_query( $addAccount );
 
-         header("Location: home.php");		//go to home page (where user can now do stuff)
+         //header("Location: home.php");		//go to home page (where user can now do stuff)
       }
    }
+}
 ?>
+
+<!DOCTYPE>
+<html>
+   <body>
+      <h1>Processing...</h1>
+      <?php
+	 echo "trying email: $email\n";
+	 echo "\nand testing passwords: $password1 against $password2\n";
+      ?>
+
+ <?php
+	 $q = "SELECT * FROM User WHERE email='$email';";				//place mySQL command inside variable
+
+	 echo "\n\nabout to do $q <br>\n";
+
+	 $result = mysql_query($q);				//send value of variable to database and get result
+
+	 if(noerror($result))					//make sure no error in result
+	 {
+	    tabledump($result);					//print result in table format
+	 }
+      ?>
+   </body>
+</html>

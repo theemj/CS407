@@ -1,0 +1,24 @@
+/*
+   Home Page Style and Layout Sheet
+
+   Filename: home_Styles.css
+   By: Desiree Howell
+*/
+
+/* Section Styles */
+
+section { 
+	font-family: Verdana, Geneva, sans serif;
+	font-weight: bold;
+	font-size: 17px;
+	text-align: center;
+}
+
+/* Section Layout */
+
+section {
+	display: block;
+	margin: 0 150px;
+	margin-top: 150px;
+	margin-bottom: 150px;
+}

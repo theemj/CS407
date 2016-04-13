@@ -24,6 +24,8 @@ echo<<<BLOCKBODY
 		<title>Midiate</title>
 
 		<link href="midiate_General_Styles.css" rel="stylesheet" />
+                <link href="home_Styles.css" rel="stylesheet" />
+
 
 	</head>
 
@@ -34,7 +36,7 @@ echo<<<BLOCKBODY
 
         <header>
 
-			<h1><img src="MidiateLogo.png" alt="Midiate" /></h1>
+			<h1><a href=home.php><img src="MidiateLogo.png" alt="Midiate" /></a></h1>
 
 			<form action="log_out.php">					<!-- Alicia; log out button to php file -->
 				<input type="submit" class="logoff" value="Log Off">
@@ -58,6 +60,14 @@ echo<<<BLOCKBODY
 		   </ul>
 
 		</nav>
+
+                <section>
+
+                <p>
+                      Welcome to Midiate, the revolutionary third-party voting app! Midiate allows you to post questions to world and receive statistics from anonymous people who can vote on the issue! Click on one of the tabs in the navigation bar to get started. "Ask It" allows you to ask a question, "Answer It" allows you to vote on other people's questions, "My Arguments" shows you your previously asked questions and their statistics, and "My Profile" allows you to manage your account. Happy voting!
+                </p>
+
+                </section>
 
 
 		<div id="footer">
