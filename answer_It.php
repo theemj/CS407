@@ -43,12 +43,12 @@ openDB();  //$query="SELECT questionText, answer1Text, answer2Text, postID FROM 
 				<tr>
 		
 					<td>					
-							<div onclick="location.href='vote.php?postID=$postID&answerChoice=1'">
+							<div onclick="location.href='vote.php?postID=$postID&answerChoice=1'" class="ans1">
 								<input type="image" src="MidiateRedMan.png" name="redman" 
 								width="60" height="60" /> $normalA1 &nbsp &nbsp &nbsp
 							</div>
 
-							<div onclick="location.href='vote.php?postID=$postID&answerChoice=2'"> 
+							<div onclick="location.href='vote.php?postID=$postID&answerChoice=2'" class="ans2"> 
 							
 							 $normalA2 <input type="image" src="MidiateBlueMan.png" name="blueman"
 								width="60" height="60" />
@@ -94,12 +94,12 @@ function showResults($postID, $normalQuestion, $normalA1, $normalA2)
 				<tr>
 		
 					<td>					
-							<div>
+							<div class="ans1">
 								<input type="image" src="MidiateRedMan.png" name="redman" 
 								width="60" height="60" /> $normalA1 &nbsp $percent1 % &nbsp &nbsp &nbsp &nbsp
 							</div>
 
-							<div> 
+							<div class="ans2"> 
 							
 							 $normalA2 &nbsp $percent2 % <input type="image" src="MidiateBlueMan.png" name="blueman"
 								width="60" height="60" />
@@ -130,7 +130,7 @@ echo<<<BLOCK1
 	<body>
             <div id="container">
 		<header>
-			<h1><img src="MidiateLogo.png" alt="Midiate" /></h1>
+			<h1><a href=home.php><img src="MidiateLogo.png" alt="Midiate" /></a></h1>
 
 			<form action="log_out.php">					<!-- Alicia; log out button to php file -->
 				<input type="submit" class="logoff" value="Log Off">

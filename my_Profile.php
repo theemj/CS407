@@ -27,7 +27,7 @@ echo<<<BLOCKBODY
 	<body>
 	  <div id="container">
 		<header>
-			<h1><img src="MidiateLogo.png" alt="Midiate" /></h1>
+			<h1><a href=home.php><img src="MidiateLogo.png" alt="Midiate" /></a></h1>
 
 			<form action="log_out.php">					<!-- Alicia; log out button to php file -->
 				<input type="submit" class="logoff" value="Log Off">

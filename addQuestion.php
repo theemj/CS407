@@ -45,7 +45,7 @@ openDB();
 
    if(noerrorquiet(mysql_query($query)))
    {
-      echo "it worked!";
+     // echo "it worked!";
       header("Location: my_Arguments.php");
    }
    else													//if there is some error sending row to table

@@ -10,7 +10,14 @@
 table {
 	font-family: Verdana, Geneva, sans serif;
 	font-weight: bold;
+
 }
 
-/* Red and Blue Man Styles */
+/* Answer Box Styles */
 
+#ans1 {
+        color: LightGray;			/*set background color to light gray*/
+
+	border: 5px solid red;				/*set border; thick solid blue*/
+	border-radius: 20px;					/*border has curved corners*/
+}

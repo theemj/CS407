@@ -20,6 +20,7 @@
    {
       $theRow = mysql_fetch_array($resultingTable);		//get the row (the password will be on the row)
       $thePassword = $theRow['password'];			//get the password from the row
+	  $theUserID = $theRow['userID'];				//get the userID from the row
 
       if($password != $thePassword)			//if wrong password for that user
       {
@@ -29,10 +30,12 @@
       {
          $_SESSION['loggedIn'] = "yes";				//mark user as logged in
          $_SESSION['email'] = $email;
+		 $_SESSION['meadUserId'] = $theUserID;
+		 
          header("Location: home.php");		//go to profile page of user
       }
    }
-   else
+   else													//login fails
    {
       header("Location: midiate_signin.html");			//go back to login page
    }

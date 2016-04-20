@@ -17,27 +17,8 @@ echo<<<BLOCKBODY
 
       <script src="error.js"></script>				<!-- JavaScripts -->
 
-      <style>
-	 body
-	 {
-            margin: 0px auto;					/*set margin; top/bottom left/right*/
-	    text-align: center;
-	 }
-	
-	 form
-	 {
-	    margin: 10px auto;					/*set all margins*/
-	    padding: 20px;
-	    width: 400px;
-	    background-color: LightGray;			/*set background color to light gray*/
-
-	    border: 5px solid blue;				/*set border; thick solid blue*/
-	    border-radius: 20px;					/*border has curved corners*/
-	    box-shadow:
-	 }
-      </style>
-
       <link href="midiate_General_Styles.css" rel="stylesheet" />	<!-- Desiree -->
+      <link href="midiate_Reg_Styles.css" rel="stylesheet" />            <!-- Desiree -->
 
    </head>
    <body>								<!-- body of the website/what visiters see -->
