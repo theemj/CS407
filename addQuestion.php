@@ -22,9 +22,10 @@ openDB();
    $answer1Text = $_POST['answer1'];
    $answer2Text = $_POST['answer2'];
 
-   $userID = '1234';					//fill in faux numbers until algorithm is finished for auto count
-   $postID = '01';
+   $userID = $_SESSION['meadUserId'];
    
+   //get postID - if no existing postIDs in Question table, assign postID as 1
+   $postID = '01';   
    $getID = "SELECT MAX(postID) FROM Question;";
    
    $resultID = mysql_query($getID);						//get a table (last row of Question's table)
@@ -34,6 +35,7 @@ openDB();
 	   $postID = makeMax($resultID);					//get the actual number to be added to this new post
    }
 
+   
    $query = "INSERT INTO Question SET "
 				. "questionText = '$questionText', "
 				. "answer1Text = '$answer1Text', "

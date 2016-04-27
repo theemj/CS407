@@ -12,6 +12,7 @@ include("openDB.php");
 
 openDB();  //$query="SELECT questionText, answer1Text, answer2Text, postID FROM Question WHERE postID=14;";
 
+$userID = $_SESSION['meadUserId'];
 
   //This function parses and displays all entries from Question table that are not this user's.
  function printfive($result)

@@ -3,6 +3,9 @@
    //edited by Maryam Ahmed
    session_start();
 
+   $userID = $_SESSION['meadUserId'];
+   $email = $_SESSION['email'];
+   
    if ($_SESSION['loggedIn'] == "yes")
    {
 echo<<<BLOCKBODY

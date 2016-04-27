@@ -10,7 +10,7 @@ include("includeMe.php");
 include("openDB.php");
 openDB();
 
-$userID =  $_SESSION['userID'] ;
+$userID =  $_SESSION['meadUserId'] ;
 $postID=$_GET['postID'];
 $answerChoice=$_GET['answerChoice'];
 

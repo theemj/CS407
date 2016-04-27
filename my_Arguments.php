@@ -4,6 +4,9 @@
    include("openDB.php");
    openDB();
 
+   $userID = $_SESSION['meadUserId'];
+   $email = $_SESSION['email'];
+
    if ($_SESSION['loggedIn'] == "yes")
    {
 echo<<<BLOCKBODY
@@ -84,7 +87,7 @@ BLOCKBODY2;
 <?php
 function placeArguments()
 {
-	$query = "SELECT * FROM Question WHERE userID='1234';";	//change to "this" user's id from session, not hardcode
+	$query = "SELECT * FROM Question WHERE userID='$userID';";	//change to "this" user's id from session, not hardcode
 	
 	$result = mysql_query($query);
 	if($result==0)

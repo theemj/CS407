@@ -15,6 +15,7 @@
    $password1 = $_POST['password'];
    $password2 = $_POST['passwordCheck'];
 
+   
    $userId = "1";								//initialize userId to something other than null
    
    $getuserID = "SELECT MAX(userID) FROM User;";   
@@ -25,6 +26,7 @@
    {
 	   $userId = makeMax($resultID);					//get the actual number to be added to this new post
    }
+ 
  
    //Check to see if the email already exists in system (in other words, the email is already in use)
 	$findEmail= "SELECT * FROM User WHERE email='$email';";
